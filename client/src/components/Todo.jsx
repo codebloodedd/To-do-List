@@ -32,5 +32,4 @@ const Todo = ({ todo, onDelete, onUpdate }) => {
   );
 };
 
-
 export default Todo;

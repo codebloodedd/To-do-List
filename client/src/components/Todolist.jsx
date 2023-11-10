@@ -72,7 +72,7 @@ const TodoList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/todos/${id}`);
+      await axios.delete(`http://localhost:8000/todos/${_id}`);
       fetchTodos();
     } catch (error) {
       console.error("Error deleting todo:", error);
@@ -81,7 +81,7 @@ const TodoList = () => {
 
   const handleUpdate = async (todo) => {
     try {
-      await axios.put(`http://localhost:8000/todos/${todo.id}`, {
+      await axios.put(`http://localhost:8000/todos/${todo._id}`, {
         text: todo.text,
         completed: !todo.completed,
         deadline: todo.deadline,
